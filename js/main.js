@@ -8,19 +8,20 @@ $( document ).ready(function(){
           if (data == "Данные из формы отправлены."){
               //Вывод модального окна с сообщением об успехе
 
-                $(".modal-body").text(data);
+                $(".modal-body").html(data);
                 $(".modal").show(200);
                 $(".modal button").click(function () {
                     $(".modal").hide(200);
+                    window.location.reload();
                 });
 
                 //перезагрузка страницы для обновления таблицы
-                window.location.reload();
+                
                 
           } else {
               //Вывод модального окна с предупреждениями
               
-              $(".modal-body").text(data);
+              $(".modal-body").html(data);
               $(".modal").show(200);
               $(".modal button").click(function () {
                   $(".modal").hide(200);
